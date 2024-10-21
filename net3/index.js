@@ -86,3 +86,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.getElementById("btn-save").style.display = "none";
+document.querySelector("#remarks").style.display = "none";
+document.querySelector("#remark").style.display = "none";
+document.getElementById("btn-done").addEventListener("click", () => {
+  const save = document.getElementById("btn-save");
+  const remarks = document.querySelector("#remarks");
+  const remark = document.querySelector("#remark");
+
+  save.style.display = save.style.display === "none" ? "block" : "none";
+  remarks.style.display = remarks.style.display === "none" ? "block" : "none";
+  remark.style.display = remark.style.display === "none" ? "block" : "none";
+});
