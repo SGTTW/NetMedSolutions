@@ -227,7 +227,7 @@ td:nth-child(6) {
 .done button:last-child {
   margin-top: 0.5rem;
 }
-#btn-save{
+#btn-save {
   margin-right: 7rem;
 }
 
@@ -286,7 +286,7 @@ td:nth-child(6) {
   width: 50%;
   position: absolute;
   right: -30px;
-  top: 28%;
+  top: 27%;
   height: max-content;
   border: none;
   border: 3px solid #ddd;
