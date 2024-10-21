@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netwalker Design</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <div class="logo-image">
+            <img src="./images/netLogo.png" class="logo-image" />
+          </div>
+          <span class="menu-icon">
+            <img src="./images/menu.png" class="menu-image" alt="menu" />
+          </span>
+          <span class="lab-name">Your Laboratory Name</span>
+        </div>
+        <div class="user-info">
+          <span class="notification"> . </span>
+          <img src="./images/avatar.png" alt="User avatar" />
+          <span class="user-name"
+            >Isaac Odinaka
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+          </span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="sidebar">
+          <div class="menu-item">
+            <img src="./images/frontOffice.png" alt="front office" />
+            <span class="menu-item-text"> Front Office </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/phlebotomy.png" alt="phlebotomy" />
+
+            <span class="menu-item-text">Phlebotomy </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/laboratory.png" alt="laboratory" />
+
+            <span class="menu-item-text">Laboratory </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/admin.png" alt="admin" />
+
+            <span class="menu-item-text">Admin </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/dispatch.png" alt="dispatch" />
+
+            <span class="menu-item-text">Dispatch </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/analyzers.png" alt="analyzers" />
+
+            <span class="menu-item-text">Analyzers </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/qc.png" alt="qc" />
+
+            <span class="menu-item-text">QC </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/account.png" alt="account" />
+
+            <span class="menu-item-text">Account </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </span>
+          </div>
+          <div class="menu-item">
+            <img src="./images/inventory.png" alt="inventory" />
+
+            <span class="menu-item-text" style="color: #666">Inventory </span>
+            <span>
+              <i class="fa-sharp fa-solid fa-arrow-up" style="color: #666"></i>
+            </span>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="top-content">
+            <h1 class="page-title">Drug Prescription Page</h1>
+            <div class="breadcrumb">
+              <span class="breadcrumb-child">Home </span>
+              <i class="fas fa-arrow-right breadcrumb-icon"></i>
+              <span class="breadcrumb-child">Page 1 </span>
+              <i class="fas fa-arrow-right breadcrumb-icon"></i>
+              <span class="bold-text">Page 2</span>
+            </div>
+          </div>
+          <div class="tab-content">
+            <ul>
+              <li>Vital History</li>
+              <li>Vital Signs</li>
+              <li>Clinical Note</li>
+              <li>Investigation Flow Chart</li>
+              <li>Prescription</li>
+              <li>Bills</li>
+              <li>Medications</li>
+              <li>Team Notes</li>
+              <li>Appointments</li>
+              <li>Visits</li>
+              <li>Summary</li>
+            </ul>
+          </div>
+          <!-- table one content -->
+          <div class="table-content">
+            <h6 class="table-desc">Prescribed Drugs</h6>
+            <table>
+              <thead style="background-color: #f0f0f0">
+                <tr>
+                  <th>S/N</th>
+                  <th>Medicine Name</th>
+                  <th>Medicine Class</th>
+                  <th>Dose & Freq</th>
+                  <th>Interval</th>
+                  <th>Duration</th>
+                  <th>Instruction</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Rows will be added here -->
+                <tr id="no-drugs-row">
+                  <td colspan="8" style="text-align: center; padding: 10px">
+                    No drugs available yet
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- done prescribing -->
+          <div class="done">
+            <button>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+              Done Prescribing
+            </button>
+
+            <label for="remarks">Remarks</label>
+            <input type="text" id="remarks" placeholder="Nil"/>
+
+            <button>Save Presentation</button>
+          </div>
+
+          <!-- search content -->
+          <div class="search-content">
+            <!--  -->
+            <div class="search">
+              <label for="medicine-class"
+                >Medicine Class
+                <span>List All Medicines</span>
+              </label>
+              <select id="medicine-class" class="search">
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="search">
+              <label for="medicine-name"
+                >Medicine name
+                <span>Add A New Medicine</span>
+              </label>
+              <select id="medicine-name" class="search">
+                <option value=""></option>
+                <option value="">Select Class</option>
+              </select>
+            </div>
+            <div class="search">
+              <label for="dose">Dose</label>
+              <select id="dose" class="search">
+                <option value=""></option>
+                <option value="">60MG</option>
+                <option value="">30MG</option>
+              </select>
+            </div>
+            <div class="search">
+              <label for="interval">Interval</label>
+
+              <select id="interval" class="search">
+                <option value="">Select frequency</option>
+                <option value="">Q2W - Every other week</option>
+              </select>
+            </div>
+            <div class="compound-input">
+              <label for="duration">Duration</label>
+              <input type="number" id="num-input" placeholder="type..." />
+              <select id="duration">
+                <option>/ 7</option>
+                <option>/ 52</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="instructions">Instructions</label>
+              <textarea id="instructions" placeholder="Nil"> </textarea>
+            </div>
+          </div>
+          <div class="add">
+            <button class="add">Add</button>
+          </div>
+
+          <div class="footer">
+            e-Lab LIS by Netwalkers NG (c) 2022. All rights reserved | About Us
+            | Contact Us | Terms Of Service | Privacy Policy
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
